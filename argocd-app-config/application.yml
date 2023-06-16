@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+Kind: Application
+metadata:
+   name: myapp-argo-application
+   namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/CDCgov/NEDSS-Helm.git
+    targetRevision: HEAD
+    path: charts
+    
